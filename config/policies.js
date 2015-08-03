@@ -26,7 +26,23 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  // '*': true,
+   '*': true,
+
+   //'*': [
+   //'basicAuth',
+   //'passport',
+   //'sessionAuth',
+   //'ModelPolicy',
+   //'AuditPolicy',
+   //'OwnerPolicy',
+   //'PermissionPolicy',
+   //'RolePolicy',
+   //'CriteriaPolicy'
+   //],
+
+  //  AuthController: {
+  //   '*': true
+  // },
 
   /***************************************************************************
   *                                                                          *
@@ -48,4 +64,13 @@ module.exports.policies = {
 		// before letting any users feed our rabbits
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
+
+   'UserController': {
+    '*': 'isAuthenticated'
+  },
+
+  'PostController': {
+    '*': 'isAuthenticated'
+  },
+
 };
