@@ -19,6 +19,40 @@ module.exports = {
             minLength: 6,
             required: true
         },
+        name: {
+            type: 'string',
+            required: true
+        },
+        surname: {
+            type: 'string',
+            required: true
+        },
+        country: {
+            type: 'string',
+            required: true
+        },
+        city: {
+            type: 'string',
+            required: true
+        },
+        gender: {
+            type: 'string',
+            required: true
+        },
+        birthday: {
+            type: 'date',
+            required: true
+        },
+        avatar: {
+            urlAva: 'string',
+            thumbnailUrlAva: 'string'
+        },
+        userCV: {
+            type: 'string'
+        },
+        userPDP: {
+            type: 'string'
+        },
         toJSON: function() {
             var obj = this.toObject();
             delete obj.password;
