@@ -112,6 +112,7 @@ function prepareSearchUserDTOs(users, cb) {
         var result = _.map(users, function(user) {
             return {
                 id: user.id,
+                email: user.email,
                 name: user.name + ' ' + user.surname,
                 department: temp[user.userPDP],
                 avatar: user.avatar.urlAva
